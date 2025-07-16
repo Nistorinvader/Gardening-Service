@@ -1,0 +1,13 @@
+.legalContent h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.legalContent p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.legalContent ul {
+    list-style-position: inside;
+}
