@@ -1,0 +1,120 @@
+.header {
+  margin-bottom: 36px;
+  border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  background: #F7FAFA;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 54px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logoBlock{
+  display: flex;
+}
+
+.logo {
+  color: #121714;
+  font-size: 18px;
+}
+
+.navigation{
+  gap: 2.25rem;
+}
+
+.nav{
+  text-decoration: none;
+  color: #121714;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+
+.inner{
+  margin: 0.5rem 0;
+}
+
+.logoText {
+  color: #121714;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.logoImg{
+  width: 44px;
+  height: 41px;
+}
+
+.button{
+  background-color: #38E07A;
+  border-radius: 8px;
+  color: #121714;
+}
+
+.button:hover{
+  background-color: #15d863;
+  color: #121714;
+}
+
+
+.desktopLinks {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.desktopButton {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.burger {
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.drawerContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mantine-spacing-md);
+}
+
+@media (max-width: 990px) {
+  .navigation {
+    display: none;
+  }
+  .logoImg{
+    display: none;
+  }
+  .logoBlock{
+    margin: 0 auto;
+    padding-right: 1rem;
+  }
+  .header{
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 325px) {
+  .logoBlock{
+    margin: 0 auto;
+    padding-right: auto;
+  }
+  .logoText {
+  color: #121714;
+  font-weight: 700;
+  font-size: 0.90rem;
+  line-height: 23px;
+  text-decoration: none;
+}
+}

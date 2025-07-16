@@ -1,0 +1,35 @@
+.button{
+    border-radius: 8px;
+    background: #38E07A;
+    color: #121714;
+
+    
+}
+
+.btnText{
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 21px; 
+}
+
+.button:hover{
+  background-color: #15d863;
+  color: black
+}
+
+
+.wrapper {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 450px;
+    left: auto;
+  }
+}

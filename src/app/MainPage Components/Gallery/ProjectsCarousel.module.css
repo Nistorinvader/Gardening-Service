@@ -1,0 +1,24 @@
+.card {
+  position: relative;
+  width: 100%;
+  height: 389px;
+  display: flex;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imageContainer {
+    display: flex;
+    gap: 0rem;
+    width: 100%;
+}
+
+.object {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}

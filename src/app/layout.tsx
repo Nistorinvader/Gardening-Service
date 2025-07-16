@@ -1,0 +1,52 @@
+import '@mantine/core/styles.css';
+import React from 'react';
+import './globals.css';
+import { MantineProvider } from '@mantine/core';
+import './globals.css'
+import Footer from './MainPage Components/Footer/Footer';
+import Header from './MainPage Components/Header/Header'
+import { Lexend } from 'next/font/google'
+import '@mantine/carousel/styles.css';
+import { CookieBanner } from './MainPage Components/CookieBanner/CookieBanner';
+import Script from 'next/script';
+
+const lexend = Lexend({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+})
+
+export const metadata = {
+  title: 'Gartenservice Augsburg',
+  description: 'Professionelle Gartenpflege in Augsburg',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="de" className={lexend.className} suppressHydrationWarning>
+      <head>
+        <link rel="shortcut icon" href="/icon.png" />
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+        />
+      </head>
+      <body>
+        <MantineProvider
+          theme={{
+            fontFamily: 'var(--font-lexend), sans-serif',
+          }}>
+        <Header />
+        <main>
+          {children}
+        </main>
+        <Footer />
+        <CookieBanner /> 
+        </MantineProvider>
+        <Script 
+          src="https://embed.tawk.to/68765214169bb91912b9705d/1j073189j" 
+          strategy="lazyOnload"
+        />
+      </body>
+    </html>
+  );
+}

@@ -1,0 +1,57 @@
+body {
+  background: #F7FAFA;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin: 0 auto;
+  width: 100%;
+}
+
+html {
+  font-family: var(--font-lexend), sans-serif;
+}
+
+.button{
+  background-color: #38E07A;
+  border-radius: 8px;
+  padding: 9.5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: #15d863;
+}
+
+
+.aboutText{
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.mainContainer{
+  padding: 0px;
+}
+
+@media (max-width: 960px) {
+.mainContainer{
+  padding: 0px 16px;
+}
+}

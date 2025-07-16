@@ -1,0 +1,24 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/Service Components/PageNav/PageNav.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+.PageNav_nav__mhA80{
+    color: #698273;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.PageNav_main__WWfsI{
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.PageNav_slugText__omR_Q{
+    color: #121714;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: 8px;
+}
