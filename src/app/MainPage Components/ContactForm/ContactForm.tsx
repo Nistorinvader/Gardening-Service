@@ -113,7 +113,7 @@ export default function ContactForm() {
 
             <div style={{ marginTop: '16px' }}>
                 <p className={classes.info}>Telefon: +49 172 5711590</p>
-                <p className={classes.info}>E-Mail: hmsnistor@gmail.com</p>
+                <p className={classes.info}>E-Mail: nistorgartenbau@gmail.com</p>
                 <p className={classes.info}>Adresse: Hauptstraße 19, 86863 Langenneufnach</p>
                 <div style={{display: 'flex', alignItems: 'center', gap: '10px', fontSize:'2rem', color: 'black'}}>
                     <Link href={'https://www.facebook.com/share/1CLYMTuWvT/?mibextid=wwXIfr'} style={{textDecoration: 'none', color: 'black'}}>
