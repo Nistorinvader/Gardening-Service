@@ -1,8 +1,7 @@
-// src/app/MainPage Components/Header/Header.tsx
 'use client'
 
 import { Button, Container, Group, Burger, Drawer} from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks'; // useMediaQuery здесь больше не нужен
+import { useDisclosure, useHeadroom } from '@mantine/hooks';
 import classes from './Header.module.css';
 import Image from 'next/image'
 import Link from 'next/link';
@@ -28,6 +27,7 @@ const links = [
 
 export default function Header() {
   const [opened, { toggle, close }] = useDisclosure(false);
+  const pinned = useHeadroom({ fixedAt: 120 });
   
   const desktopItems = links.map((link) => (
     <Link href={link.path} key={link.title} className={classes.nav}>{link.title}</Link>
@@ -38,7 +38,7 @@ export default function Header() {
   ));
 
   return (
-    <header className={classes.header}>
+    <header className={`${classes.header} ${pinned ? classes.pinned : ''}`}>
       <Container fluid className={classes.inner}>
         <Group className={classes.logoBlock}>
           <Link href={'/'}><Image src={'/logo.svg'} alt={'logo'} width={44} height={41} className={classes.logoImg}></Image></Link>

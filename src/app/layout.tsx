@@ -8,7 +8,7 @@ import Header from './MainPage Components/Header/Header'
 import { Lexend } from 'next/font/google'
 import '@mantine/carousel/styles.css';
 import { CookieBanner } from './MainPage Components/CookieBanner/CookieBanner';
-import Script from 'next/script';
+import WhatsAppButton from './MainPage Components/WhatsAppButton';
 
 const lexend = Lexend({
   subsets: ['latin'],
@@ -39,13 +39,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>
           {children}
         </main>
+         <WhatsAppButton /> 
         <Footer />
         <CookieBanner /> 
         </MantineProvider>
-        <Script 
-          src="https://embed.tawk.to/68765214169bb91912b9705d/1j073189j" 
-          strategy="lazyOnload"
-        />
       </body>
     </html>
   );

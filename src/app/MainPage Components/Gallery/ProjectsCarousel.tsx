@@ -3,36 +3,39 @@ import { Carousel } from '@mantine/carousel';
 import Image from 'next/image';
 import classes from './ProjectsCarousel.module.css';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
-import type { IImage, IVideo } from '../Gallery/Gallery';
+import { ContentfulAsset } from '@/app/types/contentful';
 
 type ProjectsCarouselProps = {
-  image: IImage[]
-  video: IVideo[]
+  image: ContentfulAsset[]
+  video: ContentfulAsset[]
+  poster?: ContentfulAsset[]
   type: true | false; 
 };
 
 
-export default function ProjectsCarousel({ image, video, type }: ProjectsCarouselProps) {
+
+export default function ProjectsCarousel({ image, video, type, poster }: ProjectsCarouselProps) {
+
   const imageSlides = image.map((img) => (
-    <Carousel.Slide key={img.path} className={classes.card}>
+    <Carousel.Slide key={`https:${img.fields.file.url}`} className={classes.card}>
       <Image 
-        src={img.path}
+        src={`https:${img.fields.file.url}`}
         width={302}
         height={389} 
-        alt={img.path} 
+        alt={`https:${img.fields.file.url}`} 
         className={classes.object}
       />
     </Carousel.Slide>
   ));
 
-  const videoSlides = video.map((vid) => (
-    <Carousel.Slide key={vid.path} className={classes.card}>
-      <VideoPlayer 
-        videoSrc={vid.path} 
-        posterSrc={vid.poster} 
-      />
-    </Carousel.Slide>
-  ));
+  const videoSlides = video.map((vid, index) => (
+  <Carousel.Slide key={`https:${vid.fields.file.url}`} className={classes.card}>
+    <VideoPlayer 
+      videoSrc={`https:${vid.fields.file.url}`} 
+      posterSrc={poster && poster[index] ? `https:${poster[index].fields.file.url}` : ''} 
+    />
+  </Carousel.Slide>
+));
 
   return (
     <section style={{padding: '16px 0'}}>

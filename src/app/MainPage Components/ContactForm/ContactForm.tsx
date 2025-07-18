@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { Button, Group, Textarea, TextInput } from "@mantine/core";
 import classes from './ContactForm.module.css';
 import { useForm } from "@mantine/form";
-import Link from 'next/link';
-import { FaFacebook, FaTiktok } from 'react-icons/fa';
+
 
 export default function ContactForm() {
     const [submissionStatus, setSubmissionStatus] = useState({
@@ -110,20 +109,6 @@ export default function ContactForm() {
                     Fehler beim Senden. Bitte versuchen Sie es später erneut.
                 </p>
             )}
-
-            <div style={{ marginTop: '16px' }}>
-                <p className={classes.info}>Telefon: +49 172 5711590</p>
-                <p className={classes.info}>E-Mail: nistorgartenbau@gmail.com</p>
-                <p className={classes.info}>Adresse: Hauptstraße 19, 86863 Langenneufnach</p>
-                <div style={{display: 'flex', alignItems: 'center', gap: '10px', fontSize:'2rem', color: 'black'}}>
-                    <Link href={'https://www.facebook.com/share/1CLYMTuWvT/?mibextid=wwXIfr'} style={{textDecoration: 'none', color: 'black'}}>
-                        <FaFacebook />
-                    </Link>
-                    <Link href={'https://www.tiktok.com/@gartenservice_bayern'} style={{textDecoration: 'none', color: 'black'}}>
-                        <FaTiktok />
-                    </Link>
-                </div>
-            </div>
         </form>
     );
 }
