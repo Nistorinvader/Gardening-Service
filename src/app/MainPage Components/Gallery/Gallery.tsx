@@ -5,6 +5,8 @@ import { contentfulClient } from "@/app/lib/contentfulClient";
 import { GalleryFields } from "@/app/types/contentful";
 import { notFound } from 'next/navigation';
 
+export const revalidate = 5;
+
 const galleryRes = await contentfulClient.getEntries({
     content_type: 'projekte',
     limit: 1
