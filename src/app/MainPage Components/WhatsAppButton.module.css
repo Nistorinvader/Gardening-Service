@@ -1,1 +1,17 @@
+.stickyWrapper {
+  position: sticky;
+  bottom: 0rem;
 
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+
+  height: 4.5rem;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.button {
+  pointer-events: auto;
+  box-shadow: var(--mantine-shadow-md);
+}
