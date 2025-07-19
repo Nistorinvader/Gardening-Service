@@ -8,7 +8,6 @@ import Header from './MainPage Components/Header/Header'
 import { Lexend } from 'next/font/google'
 import '@mantine/carousel/styles.css';
 import { CookieBanner } from './MainPage Components/CookieBanner/CookieBanner';
-import WhatsAppButton from './MainPage Components/WhatsAppButton';
 
 const lexend = Lexend({
   subsets: ['latin'],
@@ -39,7 +38,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>
           {children}
         </main>
-         <WhatsAppButton /> 
         <Footer />
         <CookieBanner /> 
         </MantineProvider>
