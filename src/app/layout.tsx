@@ -10,6 +10,8 @@ import '@mantine/carousel/styles.css';
 import { CookieBanner } from './MainPage Components/CookieBanner/CookieBanner';
 import WhatsAppButton from './MainPage Components/WhatsAppButton';
 
+export const revalidate = 5;
+
 const lexend = Lexend({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800', '900'],
