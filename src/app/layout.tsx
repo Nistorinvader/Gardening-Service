@@ -9,6 +9,7 @@ import { Lexend } from 'next/font/google'
 import '@mantine/carousel/styles.css';
 import { CookieBanner } from './MainPage Components/CookieBanner/CookieBanner';
 import WhatsAppButton from './MainPage Components/WhatsAppButton';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const lexend = Lexend({
   subsets: ['latin'],
