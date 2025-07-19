@@ -7,6 +7,8 @@ import Comments from './MainPage Components/Comments/Comments';
 import ContactForm from './MainPage Components/ContactForm/ContactForm';
 import Contacts from './MainPage Components/Contacts/Contacts';
 
+export const revalidate = 5;
+
 export default async function MyComponent() {
   return (
     <main>
