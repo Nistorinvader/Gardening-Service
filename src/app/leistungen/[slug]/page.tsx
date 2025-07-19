@@ -7,6 +7,7 @@ import ContactForm from '@/app/MainPage Components/ContactForm/ContactForm'
 import { contentfulClient } from '@/app/lib/contentfulClient'
 import { ContentfulServiceFields } from '@/app/types/contentful';
 import Contacts from '@/app/MainPage Components/Contacts/Contacts';
+import WhatsAppButton from '@/app/MainPage Components/WhatsAppButton';
 
 export const revalidate = 5;
 
@@ -34,6 +35,7 @@ export default async function ServicePage({params} : {params: Promise<{slug: str
                 <ContactForm />
                 <Contacts/>
             </Container>
+            <WhatsAppButton/>
         </main>
     )
 }
