@@ -8,6 +8,7 @@ import { contentfulClient } from '@/app/lib/contentfulClient'
 import { ContentfulServiceFields } from '@/app/types/contentful';
 import Contacts from '@/app/MainPage Components/Contacts/Contacts';
 
+export const revalidate = 5;
 
 export default async function ServicePage({params} : {params: Promise<{slug: string}>}){
     const res = await contentfulClient.getEntries({
