@@ -1,5 +1,7 @@
 import type { ServiceProps } from '@/app/types/contentful';
 
+export const revalidate = 5;
+
 export default function SubServices({service}:ServiceProps){
     return(
         <section>
