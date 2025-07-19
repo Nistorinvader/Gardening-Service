@@ -16,3 +16,23 @@
   color: #698273;
   font-size: var(--mantine-font-size-sm);
 }
+
+.DHinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  gap: 1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 390px) {
+  .DHinner{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.inner {
+  height: 50px;
+}
+}
