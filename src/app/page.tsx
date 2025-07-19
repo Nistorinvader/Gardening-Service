@@ -6,6 +6,7 @@ import Gallery from './MainPage Components/Gallery/Gallery';
 import Comments from './MainPage Components/Comments/Comments';
 import ContactForm from './MainPage Components/ContactForm/ContactForm';
 import Contacts from './MainPage Components/Contacts/Contacts';
+import WhatsAppButton from './MainPage Components/WhatsAppButton';
 
 export const revalidate = 5;
 
@@ -21,6 +22,7 @@ export default async function MyComponent() {
           <ContactForm />
           <Contacts />
       </Container>
+      <WhatsAppButton/>
     </main>
   );
 }
