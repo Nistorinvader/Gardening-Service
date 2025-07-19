@@ -5,6 +5,8 @@ import type { HomePageType } from '@/app/types/contentful'
 import { contentfulClient } from '@/app/lib/contentfulClient'
 import { notFound } from 'next/navigation';
 
+export const revalidate = 5;
+
 const homePageRes = await contentfulClient.getEntries({
     content_type: 'homePage',
     limit: 1
