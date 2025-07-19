@@ -4,6 +4,8 @@ import { contentfulClient } from "@/app/lib/contentfulClient";
 import { CommentsType } from "@/app/types/contentful";
 import { notFound } from 'next/navigation';
 
+export const revalidate = 5;
+
 export default async function Comments() {
   const commentsRes = await contentfulClient.getEntries({
     content_type: 'comments',
