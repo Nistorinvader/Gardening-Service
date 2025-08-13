@@ -15,9 +15,9 @@ const lexend = Lexend({
 })
 
 export const metadata = {
-  title: 'Gartenservice Augsburg',
-  description: 'Professionelle Gartenpflege in Augsburg',
+  metadataBase: new URL("https://www.nistor-gartenbau.de"),
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
