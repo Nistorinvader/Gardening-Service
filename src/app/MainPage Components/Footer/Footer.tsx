@@ -10,6 +10,9 @@ export default function Footer() {
           <Link href={'/Impressum'} className={classes.logo} style={{textDecoration: 'none'}}>Impressum</Link>
           <Link href={'/Datenschutz'} className={classes.logo} style={{textDecoration: 'none'}}>Datenschutz</Link>
       </Container>
+      <Container className={classes.DHinner}>
+        <Link href={'https://github.com/DHensirovskyi'} className={classes.logo} style={{textDecoration: 'none'}}>Website designed & developed by Dmytro Hensirovskyi</Link>
+      </Container>
     </footer>
   );
 }

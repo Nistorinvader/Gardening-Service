@@ -2,6 +2,8 @@ import Link from 'next/link'
 import classes from './ServiceHero.module.css'
 import type { ServiceProps } from '@/app/types/contentful';
 
+export const revalidate = 5;
+
 export default function ServiceHero({service}:ServiceProps){
     return(
         <section>

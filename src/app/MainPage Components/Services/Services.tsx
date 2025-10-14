@@ -5,7 +5,7 @@ import { ContentfulAsset, LeistungType } from "@/app/types/contentful";
 import { contentfulClient } from "@/app/lib/contentfulClient";
 import { notFound } from 'next/navigation';
 
-
+export const revalidate = 5;
 
 export default async function Services(){
   const leistungenRes = await contentfulClient.getEntries({

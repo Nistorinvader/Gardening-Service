@@ -8,7 +8,6 @@ import Header from './MainPage Components/Header/Header'
 import { Lexend } from 'next/font/google'
 import '@mantine/carousel/styles.css';
 import { CookieBanner } from './MainPage Components/CookieBanner/CookieBanner';
-import WhatsAppButton from './MainPage Components/WhatsAppButton';
 
 const lexend = Lexend({
   subsets: ['latin'],
@@ -16,8 +15,21 @@ const lexend = Lexend({
 })
 
 export const metadata = {
-  title: 'Gartenservice Augsburg',
-  description: 'Professionelle Gartenpflege in Augsburg',
+  metadataBase: new URL("https://www.nistor-gartenbau.de"),
+  title: "Gartenbau & Landschaftsbau in Augsburg und München",
+  description: "Professionelle Gartenpflege, Baumfällung, Heckenpflege, Rasenpflege, Pflasterarbeiten und mehr in Augsburg und München.",
+  keywords: [
+    "Gartenbau", "Landschaftsbau", "Gartenpflege", "HausUndGarten", "Handwerker",
+    "Baumfällung", "Baumpflege", "Baumschnitt", "Wurzelentfernung", "Stubbenfräsen",
+    "HeckeSchneiden", "HeckePflanzen", "HeckePflege", "Gartenhecke",
+    "Rasenpflege", "Rollrasen", "Rasenverlegung", "Rasenmähen",
+    "Pflasterarbeiten", "Terrassenbau", "Naturstein", "Gartenwege",
+    "Zaunbau", "Sichtschutz", "Mauerbau", "Steinmauer",
+    "Bewässerung", "Gartenbewässerung", "Drainage", "Erdarbeiten",
+    "Gartenideen", "GartenGestaltung", "Außenanlage",
+    "Augsburg", "München", "GartenbauAugsburg", "GartenbauMünchen",
+    "BaumfällungAugsburg", "BaumfällungMünchen", "HandwerkerAugsburg", "HandwerkerMünchen"
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -39,7 +51,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>
           {children}
         </main>
-         <WhatsAppButton /> 
         <Footer />
         <CookieBanner /> 
         </MantineProvider>

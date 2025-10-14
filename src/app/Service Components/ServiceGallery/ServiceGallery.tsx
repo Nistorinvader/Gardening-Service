@@ -3,6 +3,8 @@ import Image from 'next/image'
 import classes from './ServiceGallery.module.css'
 import type { ServiceProps } from '@/app/types/contentful';
 
+export const revalidate = 5;
+
 export default function ServiceGallery({service}:ServiceProps){
     return(
         <section>

@@ -5,6 +5,8 @@ import { ContactsType } from '@/app/types/contentful';
 import { contentfulClient } from '@/app/lib/contentfulClient';
 import { notFound } from 'next/navigation';
 
+export const revalidate = 5;
+
 export default async function Contacts(){
     const contactsRes = await contentfulClient.getEntries({
         content_type: 'contactForm',
